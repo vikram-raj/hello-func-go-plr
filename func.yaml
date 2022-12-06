@@ -1,0 +1,26 @@
+specVersion: 0.34.0
+name: hello-func-go-plr
+runtime: go
+registry: ""
+image: ""
+imageDigest: ""
+created: 2022-12-06T14:56:25.245356716+05:30
+invocation:
+  format: http
+build:
+  buildpacks:
+  - paketo-buildpacks/go-dist
+  - ghcr.io/boson-project/go-function-buildpack:tip
+  builder: ""
+  buildEnvs: []
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: ""
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness
